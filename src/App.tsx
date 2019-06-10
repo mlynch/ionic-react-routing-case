@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import '@ionic/core/css/core.css';
+import '@ionic/core/css/ionic.bundle.css';
+import { IonPage } from '@ionic/react';
+import { Route, Redirect } from 'react-router';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-const App: React.FC = () => {
+import './App.css';
+import AppStack from './pages/AppStack';
+import { LoginPage } from './pages/Login';
+import { SignupPage } from './pages/Signup';
+
+const App: React.SFC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <IonPage>
+        <Route path="/" component={AppStack} />
+        <Route path="/login" component={LoginPage} exact={true} />
+        <Route path="/signup" component={SignupPage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/signup"/>}/>
+      </IonPage>
+    </Router>
+  )
 }
 
 export default App;
