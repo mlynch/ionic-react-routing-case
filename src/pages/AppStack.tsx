@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/react';
-import { Route, Redirect } from 'react-router';
+import { Route } from 'react-router';
 import { ActivityPage } from './Activity';
 import { SearchPage } from './Search';
 import { ProfilePage } from './Profile';

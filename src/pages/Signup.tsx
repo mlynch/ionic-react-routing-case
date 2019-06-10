@@ -14,7 +14,7 @@ import {
   IonButtons
 } from "@ionic/react";
 
-export const SignupPage = ({ history, match, goBack }: any) => {
+export const SignupPage = ({ history }: any) => {
   const goTo = (path: string) => {
     history.push(path);
   }
@@ -24,7 +24,7 @@ export const SignupPage = ({ history, match, goBack }: any) => {
     <IonHeader>
       <IonToolbar color="primary">
         <IonButtons slot="start">
-          <IonBackButton goBack={goBack} defaultHref={`/`} />
+          <IonBackButton defaultHref="/" />
         </IonButtons>
         <IonTitle>Signup</IonTitle>
       </IonToolbar>
@@ -40,11 +40,11 @@ export const SignupPage = ({ history, match, goBack }: any) => {
             <IonLabel>Password</IonLabel>
             <IonInput type="password" />
           </IonItem>
-          <IonButton padding={true} expand="block" type="submit">Sign up</IonButton>
+          <IonButton expand="block" type="submit">Sign up</IonButton>
         </IonList>
       </form>
       <div>
-        <a href="#" onClick={(e) => { e.preventDefault(); goTo('/login')}}>Log in instead</a>
+        <a href="/login" onClick={(e) => { e.preventDefault(); goTo('/login')}}>Log in instead</a>
       </div>
     </IonContent>
   </>

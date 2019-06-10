@@ -3,13 +3,13 @@ import React from 'react';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton } from "@ionic/react";
 
 
-export const SearchPage = ({ history, goBack }: any) => {
+export const SearchPage = () => {
   return (
   <>
     <IonHeader>
       <IonToolbar color="primary">
         <IonButtons slot="start">
-          <IonBackButton goBack={goBack} defaultHref={`/`} />
+          <IonBackButton defaultHref={`/`} />
         </IonButtons>
         <IonTitle>Search</IonTitle>
       </IonToolbar>
