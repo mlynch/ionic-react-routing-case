@@ -9,6 +9,7 @@ import './App.css';
 import AppStack from './pages/AppStack';
 import { LoginPage } from './pages/Login';
 import { SignupPage } from './pages/Signup';
+import ResetPasswordPage from './pages/ResetPassword';
 
 const App: React.SFC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.SFC = () => {
         <Route path="/" component={AppStack} />
         <Route path="/login" component={LoginPage} exact={true} />
         <Route path="/signup" component={SignupPage} exact={true} />
+        <Route path="/reset-password" component={ResetPasswordPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/signup"/>}/>
       </IonPage>
     </Router>

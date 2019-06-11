@@ -24,7 +24,8 @@ export const SignupPage = ({ history }: any) => {
     <IonHeader>
       <IonToolbar color="primary">
         <IonButtons slot="start">
-          <IonBackButton defaultHref="/" />
+          {/* this is the page the default root route goes to, so does it make sense to have a back button? */}
+          {/* <IonBackButton defaultHref="/" /> */}
         </IonButtons>
         <IonTitle>Signup</IonTitle>
       </IonToolbar>

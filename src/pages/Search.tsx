@@ -9,7 +9,8 @@ export const SearchPage = () => {
     <IonHeader>
       <IonToolbar color="primary">
         <IonButtons slot="start">
-          <IonBackButton defaultHref={`/`} />
+          {/* does it make sense this page has a back button? */}
+          {/* <IonBackButton defaultHref={`/`} /> */}
         </IonButtons>
         <IonTitle>Search</IonTitle>
       </IonToolbar>

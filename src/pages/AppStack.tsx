@@ -13,7 +13,7 @@ const AppStack: React.SFC = () => {
         <Route path="/:tab(activity)" component={ActivityPage} exact={true} />
         <Route path="/:tab(search)" component={SearchPage} exact={true} />
         <Route path="/:tab(profile)" component={ProfilePage} exact={true} />
-        <Route path="/:tab(detail)/:thing" component={DetailPage} exact={true} />
+        <Route path="/:tab(activity)/detail/:thing" component={DetailPage}/>
         <Route path="/:username" component={ProfilePage} />
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
