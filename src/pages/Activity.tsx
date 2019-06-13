@@ -17,7 +17,7 @@ export const ActivityPage = ({ history }: any) => {
     </IonHeader>
     <IonContent>
       <h2>Activity</h2>
-      <IonButton onClick={() => goTo('/detail/thing')}>Go to detail</IonButton>
+      <IonButton onClick={() => goTo('/activity/detail/thing')}>Go to detail</IonButton>
     </IonContent>
   </>
   );

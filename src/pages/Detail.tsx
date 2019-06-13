@@ -1,12 +1,9 @@
 import React from 'react';
 
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonBackButton, IonButtons } from "@ionic/react";
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonBackButton, IonButtons } from "@ionic/react";
 
 
-export const DetailPage = ({ history, match, goBack }: any) => {
-  const goTo = (path: string) => {
-    history.push(path);
-  }
+export const DetailPage = ({ history, match }: any) => {
 
   console.log('Detail for thing', match.params.thing);
 
@@ -15,7 +12,7 @@ export const DetailPage = ({ history, match, goBack }: any) => {
     <IonHeader>
       <IonToolbar color="primary">
         <IonButtons slot="start">
-          <IonBackButton goBack={goBack} defaultHref={`/`} />
+          <IonBackButton defaultHref={`/activity`} />
         </IonButtons>
         <IonTitle>Detail</IonTitle>
       </IonToolbar>
