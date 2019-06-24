@@ -12,7 +12,7 @@ export const DetailPage = ({ history, match }: any) => {
     <IonHeader>
       <IonToolbar color="primary">
         <IonButtons slot="start">
-          <IonBackButton defaultHref={`/activity`} />
+          <IonBackButton defaultHref={`/tabs/activity`} />
         </IonButtons>
         <IonTitle>Detail</IonTitle>
       </IonToolbar>

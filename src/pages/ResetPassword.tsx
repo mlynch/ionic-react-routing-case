@@ -5,7 +5,7 @@ interface ResetPasswordPageProps {}
 
 const ResetPasswordPage: React.SFC<ResetPasswordPageProps> = () => {
   return (
-    <>
+    <IonContent>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Title</IonTitle>
@@ -14,7 +14,7 @@ const ResetPasswordPage: React.SFC<ResetPasswordPageProps> = () => {
       <IonContent>
         <IonLabel>Reset your password, yo</IonLabel>
       </IonContent>
-    </>
+    </IonContent>
   );
 };
 

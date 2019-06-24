@@ -30,7 +30,7 @@ export const LoginPage = ({ history }: any) => {
       </IonToolbar>
     </IonHeader>
     <IonContent>
-      <form onSubmit={e => goTo('/activity')} action="post">
+      <form onSubmit={e => goTo('/tabs/activity')} action="post">
         <IonList>
           <IonItem>
             <IonLabel>Email</IonLabel>

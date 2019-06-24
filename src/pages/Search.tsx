@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonBackButton } from "@ionic/react";
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons } from "@ionic/react";
 
 
 export const SearchPage = () => {
