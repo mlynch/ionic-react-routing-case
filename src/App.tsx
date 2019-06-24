@@ -1,7 +1,7 @@
 import React from 'react';
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
-import { IonPage } from '@ionic/react';
+import { IonPage, IonRouterOutlet, IonReactRouter, IonApp } from '@ionic/react';
 import { Route, Redirect } from 'react-router';
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -11,18 +11,24 @@ import { LoginPage } from './pages/Login';
 import { SignupPage } from './pages/Signup';
 import ResetPasswordPage from './pages/ResetPassword';
 
-const App: React.SFC = () => {
+const App: React.FunctionComponent = () => {
   return (
     <Router>
-      <IonPage>
-        <Route path="/" component={AppStack} />
-        <Route path="/login" component={LoginPage} exact={true} />
-        <Route path="/signup" component={SignupPage} exact={true} />
-        <Route path="/reset-password" component={ResetPasswordPage} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/signup"/>}/>
-      </IonPage>
+      <IonApp>
+        <IonReactRouter>
+          <IonPage>
+            <IonRouterOutlet>
+              <Route path="/login" component={LoginPage} exact={true} />
+              <Route path="/signup" component={SignupPage} exact={true} />
+              <Route path="/reset-password" component={ResetPasswordPage} exact={true} />
+              <Route exact path="/" render={() => <Redirect to="/signup" />} />
+            </IonRouterOutlet>
+            <Route path="/tabs" component={AppStack} />
+          </IonPage>
+        </IonReactRouter>
+      </IonApp>
     </Router>
-  )
-}
+  );
+};
 
 export default App;

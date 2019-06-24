@@ -10,13 +10,12 @@ import {
   IonLabel,
   IonInput,
   IonButton,
-  IonBackButton,
   IonButtons
 } from "@ionic/react";
 
 export const SignupPage = ({ history }: any) => {
   const goTo = (path: string) => {
-    history.push(path);
+    history.push(path, {direction: 'forward'});
   }
 
   return (
@@ -31,7 +30,7 @@ export const SignupPage = ({ history }: any) => {
       </IonToolbar>
     </IonHeader>
     <IonContent>
-      <form onSubmit={e => goTo('/activity')} action="post">
+      <form onSubmit={e => {e.preventDefault(); goTo('/tabs/activity')}} action="post">
         <IonList>
           <IonItem>
             <IonLabel>Email</IonLabel>
